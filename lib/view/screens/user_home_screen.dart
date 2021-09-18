@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:logacatch/main.dart';
 import 'package:logacatch/view/widgets/background_screen.dart';
 import 'package:logacatch/view/widgets/bottom_icon_button.dart';

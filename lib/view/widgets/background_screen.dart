@@ -19,7 +19,6 @@ class _BackgroundState extends State<Background> {
     gridWidth = ScreenConfig.gridWidth;
     return SafeArea(
       child: Scaffold(
-        //resizeToAvoidBottomInset: false,
         body: Container(
           height: gridHeight! * 100,
           width: gridWidth! * 100,

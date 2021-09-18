@@ -57,7 +57,6 @@ class _UserRegistrationState extends State<UserRegistration> {
                       ),
                     ),
                     Expanded(child: Container()),
-                    // Container(height: gridHeight!*8,margin: EdgeInsets.symmetric(vertical: gridHeight!),decoration: ,),
                     textField("First Name", (String? value) {
                       if (_firstNameController.text.isEmpty) {
                         return "Provide a First Name";
@@ -93,83 +92,6 @@ class _UserRegistrationState extends State<UserRegistration> {
                       }
                       return null;
                     }, _passwordReController, true),
-
-                    // TextFormField(
-                    //  // maxLength: 10,
-                    //   controller: _emailController,
-                    //   keyboardType: TextInputType.emailAddress,
-                    //   autofocus: false,
-                    //   enableInteractiveSelection: true,
-                    //   onChanged: (String? value) {
-                    //     email = value;
-                    //   },
-                    //   validator: (value) {
-                    //     if (email == null)
-                    //       return 'Please provide an Email';
-                    //     else {
-                    //       // if (email!.)
-                    //       //   return 'Please eneter a valid 10 digit number';
-                    //       // else
-                    //         return null;
-                    //     }
-                    //   },
-                    //   decoration: InputDecoration(
-                    //     hintStyle: ScreenConfig.label,
-
-                    //     alignLabelWithHint: true,
-                    //     counterText: "",
-                    //     focusedBorder: ScreenConfig.borderStyle,
-                    //     errorStyle: ScreenConfig.errortxt,
-                    //     errorMaxLines: 2,
-                    //     enabledBorder: ScreenConfig.enabledborderStyle,
-                    //     labelStyle: ScreenConfig.blackH2,
-                    //     filled: true,
-                    //     fillColor: Colors.transparent,
-                    //     labelText: 'Mobile Number',
-                    //     floatingLabelBehavior: FloatingLabelBehavior.auto,
-                    //   ),
-                    // ),
-                    // SizedBox(
-                    //   height: gridHeight! * 2,
-                    // ),
-                    // InkWell(
-                    //   onTap: () {
-                    //     _submit();
-                    //   },
-                    //   child: AnimatedContainer(
-                    //     decoration: BoxDecoration(
-                    //       borderRadius:
-                    //           !isClicked ? BorderRadius.circular(10) : null,
-                    //       shape: !isClicked
-                    //           ? BoxShape.rectangle
-                    //           : BoxShape.circle,
-                    //       color: Colors.cyanAccent[700],
-                    //     ),
-                    //     height: gridHeight! * 6,
-                    //     duration: Duration(microseconds: 500),
-                    //     child: Padding(
-                    //       padding: const EdgeInsets.all(8.0),
-                    //       child: !isClicked
-                    //           ? Text(
-                    //               "Send OTP",
-                    //               style: ScreenConfig.label,
-                    //             )
-                    //           : Icon(
-                    //               Icons.done,
-                    //               color: Colors.white,
-                    //             ),
-                    //     ),
-                    //   ),
-                    // ),
-                    // // ElevatedButton(
-                    // //   onPressed: () {},
-                    // //   child: Text('Send OTP'),
-                    // //   style: ElevatedButton.styleFrom(
-                    // //       elevation: 5,
-                    // //       shadowColor: Colors.white,
-                    // //       primary: Color(4279841857),
-                    // //       onPrimary: Colors.white),
-                    // // )
                   ],
                 ),
               ),
@@ -280,15 +202,11 @@ class _UserRegistrationState extends State<UserRegistration> {
       ),
     );
   }
-  // Widget textfield(String hint,TextEditingController controller,InputDecoration){
-
-  // }
 
   void _submit() async {
     if (!_formKey.currentState!.validate()) {
       return;
     }
-    // UserCredential userCred =
 
     await FirebaseAuth.instance
         .createUserWithEmailAndPassword(
@@ -310,18 +228,5 @@ class _UserRegistrationState extends State<UserRegistration> {
         //  showAboutDialog(context:context,(context)=> AlertDialog(title: Text("An error occured",),,))
       }
     });
-
-    //await Medicines().putMedicine();
-    // await LogInApi().signUp(email).then((res) async {
-    //   setState(() {
-    //     isClicked = true;
-    //   });
-    //   await Future.delayed(Duration(seconds: 1));
-    //   Navigator.push(
-    //       context,
-    //       MaterialPageRoute(
-    //           builder: (context) =>
-    //               VerifyOTP(_emailController.text) /* Demo()*/));
-    // });
   }
 }

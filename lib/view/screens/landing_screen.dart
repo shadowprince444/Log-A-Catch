@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:logacatch/main.dart';
 import 'package:logacatch/models/authentication_handler.dart';
-import 'package:logacatch/view/screens/user_home_screen.dart';
 import 'package:logacatch/view/widgets/background_screen.dart';
 import 'package:provider/provider.dart';
 

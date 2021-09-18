@@ -1,14 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:logacatch/main.dart';
-import 'package:logacatch/models/authentication_handler.dart';
-import 'package:logacatch/view/screens/landing_screen.dart';
-import 'package:logacatch/view/screens/user_home_screen.dart';
-import 'package:logacatch/view/screens/user_registration.dart';
-import 'package:logacatch/view/widgets/background_screen.dart';
-import 'package:provider/provider.dart';
-
 import '../screen_config.dart';
 
 class LogInScreen extends StatefulWidget {
@@ -33,11 +25,6 @@ class _LogInScreenState extends State<LogInScreen> {
   ];
 
   double? gridHeight, gridWidth;
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +36,7 @@ class _LogInScreenState extends State<LogInScreen> {
       onWillPop: () {
         return Future.value(false);
       },
-      child: Container(
+      child: SizedBox(
         height: gridHeight! * 100,
         width: gridWidth! * 100,
         child: Column(children: [
