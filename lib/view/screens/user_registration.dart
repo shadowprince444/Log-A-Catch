@@ -205,36 +205,6 @@ class _UserRegistrationState extends State<UserRegistration> {
                   ),
                   Expanded(child: Container()),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: gridHeight!),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text("Do you have an account?"),
-                        SizedBox(
-                          width: gridWidth! * 2,
-                        ),
-                        InkWell(
-                          onTap: () {
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (context) =>
-                            //             const LogInScreen()));
-                          },
-                          child: SizedBox(
-                            child: Text(
-                              "Log-In !",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.blue[900],
-                                  fontSize: gridHeight! * 2.2),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
                     padding: EdgeInsets.only(bottom: gridHeight! * 1.5),
                     height: gridHeight! * 10,
                     //color: Colors.grey,

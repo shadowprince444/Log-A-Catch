@@ -33,15 +33,27 @@ class _UserHomeScreenState extends State<UserHomeScreen> {
             children: [
               SizedBox(
                 height: gridHeight! * 25,
-                child: TextButton(
-                    onPressed: () async {
-                      await FirebaseAuth.instance.signOut().then((value) =>
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => LogInPage())));
-                    },
-                    child: const Text("Log Out")),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        tooltip: "Log Out",
+                        icon: const Icon(
+                          Icons.logout,
+                          color: Color(0xFF1C393D),
+                        ),
+                        iconSize: gridHeight! * 5,
+                        onPressed: () async {
+                          await FirebaseAuth.instance.signOut().then((value) =>
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => LogInPage())));
+                        },
+                        // child: const Text("Log Out")),
+                      ),
+                    ]),
               ),
               Expanded(
                   child: Container(

@@ -18,10 +18,9 @@ class ScreenConfig {
       blackH2Bold;
   static UnderlineInputBorder? enabledborderStyle;
   static OutlineInputBorder? borderStyle, whiteOutLinedBorder;
-  static Color appBar = Color(4280298562), //Colors.red[600],
-      //Colors.black, //Colors.red[600], //Color(0xFF304A4A),
-      background = Colors.white, //Colors.grey[300],
-      onPrimary = Color(0xFFACB4B4); //Color(0xFFACB4B4);
+  static Color appBar = const Color(0xFF1C393D),
+      background = Colors.white,
+      onPrimary = const Color(0xFFACB4B4);
 
   read(BuildContext context) {
     gridHeight = (MediaQuery.of(context).size.height -
@@ -88,14 +87,14 @@ class ScreenConfig {
 
     borderStyle = OutlineInputBorder(
       borderRadius: BorderRadius.circular(25),
-      borderSide: BorderSide(width: 3, color: Colors.black),
+      borderSide: const BorderSide(width: 3, color: Colors.black),
     );
     whiteOutLinedBorder = OutlineInputBorder(
       borderRadius: BorderRadius.circular(25),
       borderSide: const BorderSide(width: 3, color: Colors.white),
     );
     enabledborderStyle = const UnderlineInputBorder(
-      borderSide: const BorderSide(
+      borderSide: BorderSide(
         color: Colors.white,
         width: 3,
       ),

@@ -50,7 +50,6 @@ class _LogInScreenState extends State<LogInScreen> {
         return Future.value(false);
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: gridWidth! * 15),
         height: gridHeight! * 100,
         width: gridWidth! * 100,
         child: Column(children: [
@@ -81,7 +80,7 @@ class _LogInScreenState extends State<LogInScreen> {
             return null;
           }, _passwordController, true),
           SizedBox(
-            height: gridHeight! * 10,
+            height: gridHeight! * 5,
           ),
           InkWell(
             onTap: () {
@@ -104,33 +103,6 @@ class _LogInScreenState extends State<LogInScreen> {
               ),
             ),
           ),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: gridHeight! * 3),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text("Don't have an account?"),
-                SizedBox(
-                  width: gridWidth! * 2,
-                ),
-                InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => const UserRegistration()));
-                  },
-                  child: SizedBox(
-                    child: Text(
-                      "Register now !",
-                      style: TextStyle(
-                          color: Colors.blue[900], fontSize: gridHeight! * 2.2),
-                    ),
-                  ),
-                )
-              ],
-            ),
-          )
         ]),
       ),
     );
@@ -185,7 +157,8 @@ class _LogInScreenState extends State<LogInScreen> {
     return Container(
       // color: Colors.deepOrange,
       height: gridHeight! * 10,
-      padding: EdgeInsets.symmetric(vertical: gridHeight!),
+      padding: EdgeInsets.symmetric(
+          vertical: gridHeight!, horizontal: gridWidth! * 15),
       child: TextFormField(
         obscureText: isObscured,
         validator: validations,
